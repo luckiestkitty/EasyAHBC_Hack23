@@ -1,0 +1,52 @@
+[
+  {
+    "name": "art #1",
+    "description": "a cat with warm lighting, set against a Beach, taken midday close-up in by the sea in 2000s, using a polaroid process",
+    "image": "art/0.png"
+  },
+  {
+    "name": "art #2",
+    "description": "a Pikachu with warm lighting, set against a nature scene, taken midday side view in by the sea in 2021, using a digital process",
+    "image": "art/1.png"
+  },
+  {
+    "name": "art #3",
+    "description": "a cat with soft lighting, set against a Flowers, taken golden hour Soft focus in in a city in 2010s, using a film process",
+    "image": "art/2.png"
+  },
+  {
+    "name": "art #4",
+    "description": "a dog with white lighting, set against a Confetti, taken midday close-up in by the sea in 2000s, using a digital process",
+    "image": "art/3.png"
+  },
+  {
+    "name": "art #5",
+    "description": "a cat with bright lighting, set against a Flowers, taken golden hour Eye-level in by the sea in 2021, using a instant film process",
+    "image": "art/4.png"
+  },
+  {
+    "name": "art #6",
+    "description": "a dog with soft lighting, set against a Confetti, taken golden hour side view in by the sea in 2000s, using a polaroid process",
+    "image": "art/5.png"
+  },
+  {
+    "name": "art #7",
+    "description": "a Pikachu with warm lighting, set against a Confetti, taken midday side view in in a cozy room in 2010s, using a digital process",
+    "image": "art/6.png"
+  },
+  {
+    "name": "art #8",
+    "description": "a Pikachu with warm lighting, set against a nature scene, taken midday close-up in by the sea in 2021, using a polaroid process",
+    "image": "art/7.png"
+  },
+  {
+    "name": "art #9",
+    "description": "a cat with white lighting, set against a Beach, taken midday side view in in a city in 2000s, using a digital process",
+    "image": "art/8.png"
+  },
+  {
+    "name": "art #10",
+    "description": "a cat with soft lighting, set against a Confetti, taken golden hour side view in in a city in 2021, using a instant film process",
+    "image": "art/9.png"
+  }
+]

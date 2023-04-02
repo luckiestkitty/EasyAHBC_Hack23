@@ -42,7 +42,7 @@ let AppService = class AppService {
                 url,
                 createdAt: new Date(),
             }));
-            await downloadImages(imageUrls, prompt);
+            await downloadImages(imageUrls, prompt, subject);
             const image = new this.imageModel({
                 prompt,
                 imageUrls,
@@ -63,51 +63,82 @@ AppService = __decorate([
 ], AppService);
 exports.AppService = AppService;
 const generatePrompt = async (subject) => {
-    const angles = ['close-up', 'Eye-level', 'Soft focus', 'panoramic', 'side view'];
-    const lightings = ['natural', 'warm', 'soft'];
-    const locations = ['in a cozy room', 'in a city', 'by the sea'];
-    const timesOfDay = ['midday', 'golden hour'];
-    const processes = ['digital', 'film', 'polaroid', 'instant film'];
-    const years = ['2021', '2010s', '2000s'];
-    const lightingTypes = ['soft', 'bright', 'warm', 'white'];
-    const backgrounds = ['nature scene', 'Rainbow', 'Confetti', 'Flowers', 'Beach'];
-    const lightingType = lightingTypes[Math.floor(Math.random() * lightingTypes.length)];
-    const background = backgrounds[Math.floor(Math.random() * backgrounds.length)];
-    const angle = angles[Math.floor(Math.random() * angles.length)];
-    const lighting = lightings[Math.floor(Math.random() * lightings.length)];
-    const location = locations[Math.floor(Math.random() * locations.length)];
-    const timeOfDay = timesOfDay[Math.floor(Math.random() * timesOfDay.length)];
-    const process = processes[Math.floor(Math.random() * processes.length)];
-    const year = years[Math.floor(Math.random() * years.length)];
-    const template = handlebars_1.default.compile('a {{subject}} with {{lightingType}} lighting, set against a {{background}}, taken {{timeOfDay}} {{angle}} in {{location}} in {{year}}, using a {{process}} process');
-    const prompt = template({
-        subject: subject,
-        lightingType: lightingType,
-        background: background,
-        angle: angle,
-        lighting: lighting,
-        location: location,
-        timeOfDay: timeOfDay,
-        process: process,
-        year: year
-    });
-    return prompt;
+    try {
+        let prompt;
+        if (subject == "art") {
+            const objects = ['dog', 'cat', `Pikachu`];
+            const angles = ['close-up', 'Eye-level', 'Soft focus', 'panoramic', 'side view'];
+            const lightings = ['natural', 'warm', 'soft'];
+            const locations = ['in a cozy room', 'in a city', 'by the sea'];
+            const timesOfDay = ['midday', 'golden hour'];
+            const processes = ['digital', 'film', 'polaroid', 'instant film'];
+            const years = ['2021', '2010s', '2000s'];
+            const lightingTypes = ['soft', 'bright', 'warm', 'white'];
+            const backgrounds = ['nature scene', 'Rainbow', 'Confetti', 'Flowers', 'Beach'];
+            const object = objects[Math.floor(Math.random() * objects.length)];
+            const lightingType = lightingTypes[Math.floor(Math.random() * lightingTypes.length)];
+            const background = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+            const angle = angles[Math.floor(Math.random() * angles.length)];
+            const lighting = lightings[Math.floor(Math.random() * lightings.length)];
+            const location = locations[Math.floor(Math.random() * locations.length)];
+            const timeOfDay = timesOfDay[Math.floor(Math.random() * timesOfDay.length)];
+            const process = processes[Math.floor(Math.random() * processes.length)];
+            const year = years[Math.floor(Math.random() * years.length)];
+            const template = handlebars_1.default.compile('a {{object}} with {{lightingType}} lighting, set against a {{background}}, taken {{timeOfDay}} {{angle}} in {{location}} in {{year}}, using a {{process}} process');
+            prompt = template({
+                object: object,
+                lightingType: lightingType,
+                background: background,
+                angle: angle,
+                lighting: lighting,
+                location: location,
+                timeOfDay: timeOfDay,
+                process: process,
+                year: year
+            });
+        }
+        else if (subject == "philosophy") {
+            const philosophers = ['Plato', 'Aristotle', 'Kant', 'Nietzsche', 'Descartes'];
+            const works = ['The Republic', 'Nicomachean Ethics', 'Critique of Pure Reason', 'Thus Spoke Zarathustra', 'Meditations'];
+            const philosopher = philosophers[Math.floor(Math.random() * philosophers.length)];
+            const work = works[Math.floor(Math.random() * works.length)];
+            const adjective1 = ['thought-provoking', 'enlightening', 'insightful', 'philosophical', 'introspective'][Math.floor(Math.random() * 5)];
+            const adjective2 = ['detailed', 'illustrative', 'realistic', 'hyperrealistic', 'surreal'][Math.floor(Math.random() * 5)];
+            const engine = ['Unreal Engine 5', 'Unity', 'Blender', 'Maya', 'Cinema 4D'][Math.floor(Math.random() * 5)];
+            const resolution = ['8K', '4K', '1080p', '720p'][Math.floor(Math.random() * 4)];
+            const template = handlebars_1.default.compile('{{philosopher}}, with their famous work {{work}}, in a {{adjective1}} and {{adjective2}} {{engine}} render, at {{resolution}} resolution');
+            prompt = template({
+                philosopher: philosopher,
+                work: work,
+                adjective1: adjective1,
+                adjective2: adjective2,
+                engine: engine,
+                resolution: resolution
+            });
+        }
+        return prompt;
+    }
+    catch (error) {
+        console.error('Error generating prompt:', error.message);
+        return null;
+    }
 };
-async function downloadImages(imageUrls, prompts) {
-    const directory = './images';
+async function downloadImages(imageUrls, prompts, subject) {
+    const directory = `./images/${subject}`;
     if (!fs.existsSync(directory)) {
-        fs.mkdirSync(directory);
+        fs.mkdirSync(directory, { recursive: true });
     }
     let currentImageNumber = fs.readdirSync(directory).length;
     let images = [];
-    if (fs.existsSync('./images.json')) {
-        const contents = fs.readFileSync('./images.json', 'utf8');
+    const jsonFilePath = `./images/${subject}.json`;
+    if (fs.existsSync(jsonFilePath)) {
+        const contents = fs.readFileSync(jsonFilePath, 'utf8');
         images = JSON.parse(contents);
     }
     const newImages = [];
     for (let i = 0; i < imageUrls.length; i++) {
         const imageUrl = imageUrls[i];
-        const prompt = prompts[i];
+        const prompt = prompts;
         try {
             const response = await axios_1.default.get(imageUrl.url, { responseType: 'stream' });
             const contentType = response.headers['content-type'];
@@ -117,9 +148,9 @@ async function downloadImages(imageUrls, prompts) {
             response.data.pipe(fs.createWriteStream(filepath));
             console.log(`Downloaded ${filename}`);
             const image = {
-                name: `Your Collection #${currentImageNumber + 1}`,
+                name: `${subject} #${currentImageNumber + i + 1}`,
                 description: prompt,
-                image: filename,
+                image: `${subject}/${filename}`,
             };
             newImages.push(image);
             currentImageNumber++;
@@ -130,6 +161,6 @@ async function downloadImages(imageUrls, prompts) {
     }
     images = images.concat(newImages);
     const json = JSON.stringify(images, null, 2);
-    fs.writeFileSync('./images.json', json);
+    fs.writeFileSync(jsonFilePath, json);
 }
 //# sourceMappingURL=app.service.js.map

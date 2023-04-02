@@ -1,0 +1,52 @@
+[
+  {
+    "name": "philosophy #1",
+    "description": "Plato, with their famous work Critique of Pure Reason, in a philosophical and illustrative Cinema 4D render, at 8K resolution",
+    "image": "philosophy/0.png"
+  },
+  {
+    "name": "philosophy #2",
+    "description": "Nietzsche, with their famous work Nicomachean Ethics, in a insightful and surreal Unreal Engine 5 render, at 1080p resolution",
+    "image": "philosophy/1.png"
+  },
+  {
+    "name": "philosophy #3",
+    "description": "Nietzsche, with their famous work Thus Spoke Zarathustra, in a thought-provoking and surreal Cinema 4D render, at 4K resolution",
+    "image": "philosophy/2.png"
+  },
+  {
+    "name": "philosophy #4",
+    "description": "Kant, with their famous work Critique of Pure Reason, in a introspective and illustrative Unreal Engine 5 render, at 720p resolution",
+    "image": "philosophy/3.png"
+  },
+  {
+    "name": "philosophy #5",
+    "description": "Aristotle, with their famous work Meditations, in a thought-provoking and detailed Blender render, at 8K resolution",
+    "image": "philosophy/4.png"
+  },
+  {
+    "name": "philosophy #6",
+    "description": "Nietzsche, with their famous work The Republic, in a enlightening and realistic Maya render, at 720p resolution",
+    "image": "philosophy/5.png"
+  },
+  {
+    "name": "philosophy #7",
+    "description": "Descartes, with their famous work Meditations, in a enlightening and realistic Unity render, at 4K resolution",
+    "image": "philosophy/6.png"
+  },
+  {
+    "name": "philosophy #8",
+    "description": "Descartes, with their famous work Nicomachean Ethics, in a introspective and detailed Blender render, at 8K resolution",
+    "image": "philosophy/7.png"
+  },
+  {
+    "name": "philosophy #9",
+    "description": "Nietzsche, with their famous work The Republic, in a insightful and surreal Blender render, at 8K resolution",
+    "image": "philosophy/8.png"
+  },
+  {
+    "name": "philosophy #10",
+    "description": "Nietzsche, with their famous work Critique of Pure Reason, in a insightful and detailed Unreal Engine 5 render, at 720p resolution",
+    "image": "philosophy/9.png"
+  }
+]
