@@ -25,7 +25,7 @@ Garndens NFT contracts deployed on Ethereum and Algorand using Thirdweb NFT mint
 
 Contract on Alogrand Mikomeda Testnet: 
 - https://testnet-algorand-rollup.a1.milkomeda.com/address/0x6ed5AA348b93022D0f117823f2F7525EecA526fd
-- Thirdweb page: https://thirdweb.com/goerli/0xD37fc110E4f1D12Ba267D0b30a66acb983A08924/nfts
+- Thirdweb page: https://thirdweb.com/milkomeda-a1-testnet/0x6ed5AA348b93022D0f117823f2F7525EecA526fd/nfts
 
 Contract on Etherum Goerli Testnet: 
 - https://goerli.etherscan.io/token/0xd37fc110e4f1d12ba267d0b30a66acb983a08924
