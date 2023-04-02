@@ -23,10 +23,12 @@ The garden is composed of various palaces, such as the Art Palace, Philosophy Pa
 
 Garndens NFT contracts deployed on Ethereum and Algorand using Thirdweb NFT mint SDK and websites.
 
-Contract on Alogrand Mikomeda Testnet: https://testnet-algorand-rollup.a1.milkomeda.com/address/0x6ed5AA348b93022D0f117823f2F7525EecA526fd
+Contract on Alogrand Mikomeda Testnet: 
+- https://testnet-algorand-rollup.a1.milkomeda.com/address/0x6ed5AA348b93022D0f117823f2F7525EecA526fd
 - Thirdweb page: https://thirdweb.com/goerli/0xD37fc110E4f1D12Ba267D0b30a66acb983A08924/nfts
 
-Contract on Etherum Goerli Testnet: https://goerli.etherscan.io/token/0xd37fc110e4f1d12ba267d0b30a66acb983a08924
+Contract on Etherum Goerli Testnet: 
+- https://goerli.etherscan.io/token/0xd37fc110e4f1d12ba267d0b30a66acb983a08924
 - Thirdweb page: https://thirdweb.com/goerli/0xD37fc110E4f1D12Ba267D0b30a66acb983A08924/nfts
 
 In addition, the contracts can be also created and deployed through Thirweb CLI (https://github.com/luckiestkitty/EasyAHBC_Hack23/tree/main/mindgrowinggardens-contracts).
