@@ -16,7 +16,7 @@ Join us in our mission to chane lives and create a more mentally leahlthy world,
 
 Technical Design Diagram: https://excalidraw.com/#room=2f85241dc382a7c56f5c,VUiWxvfJMZ_zBDl_P7IBzQ
 
-The garden is composed of various palaces, such as the Art Palace, Philosophy Palace, and others. Each palace is situated on a specific blockchain. For instance, the Art Palace is on Ethereum, while the Philosophy Palace is on Algorand. The NFT serves as a representation of the materials housed within each palace. Suppose a user is presently inside the Art Palace (located on Ethereum) and desires to access the Philosophy Palace. In that case, they can use Axelar's inter-chain technology to teleport (convert) their Art NFT on Ethereum to a Philosophy NFT on Algorand.
+The garden is composed of various palaces (NFTs), such as the Art Palace, Philosophy Palace, and others. Each palace is situated on a specific blockchain. For instance, the Art Palace is on Ethereum, while the Philosophy Palace is on Algorand. The NFT serves as a representation of the materials housed within each palace. Suppose a user is presently inside the Art Palace (located on Ethereum) and desires to access the Philosophy Palace. In that case, they can use Axelar's inter-chain technology to teleport (convert) their Art NFT on Ethereum to a Philosophy NFT on Algorand.
 
 
 ## How Sponsors Tech Power US
@@ -37,3 +37,9 @@ In addition, the contracts can be also created and deployed through Thirweb CLI 
 [Axelar](https://axelar.network/) provides the technology that connects the NFT on different blockchains via `callContract`. The Proof of Concept is succeed by deploying and test on local!
 - Contract: https://github.com/luckiestkitty/EasyAHBC_Hack23/blob/main/axelar-interPalaces/examples/evm/interPalaces-nft/InterPalacesNFT.sol 
 
+## Future works
+
+- Deploy and test the NFT with axelar interchain capability powered by Axelar on testnet.
+- Generate NFTs to support more digital format (music, texts, and etc).
+- Enable the conversational agent features to prove powerful cognitive tools.
+- UI/UX designs.
