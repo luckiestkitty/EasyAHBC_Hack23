@@ -12,7 +12,7 @@ export default function() {
   const navigate = useNavigate();
 
   const clickSearch = () => {
-    navigate('/zora', {
+    navigate('/mint', {
       replace: true,
     })
   }
