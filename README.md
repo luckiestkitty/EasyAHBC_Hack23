@@ -14,6 +14,16 @@ Join us in our mission to chane lives and create a more mentally leahlthy world,
 
 ## Technical Overview
 
+Technical Design Diagram: https://excalidraw.com/#room=2f85241dc382a7c56f5c,VUiWxvfJMZ_zBDl_P7IBzQ
+
+The garden is composed of various palaces, such as the Art Palace, Philosophy Palace, and others. Each palace is situated on a specific blockchain. For instance, the Art Palace is on Ethereum, while the Philosophy Palace is on Algorand. The NFT serves as a representation of the materials housed within each palace. Suppose a user is presently inside the Art Palace (located on Ethereum) and desires to access the Philosophy Palace. In that case, they can use Axelar's inter-chain technology to teleport (convert) their Art NFT on Ethereum to a Philosophy NFT on Algorand.
+
+
+
+
 ## How Sponsors Stacks Power US
 
+NFT contracts deployed on Ethereum and Algorand using thirdweb NFT mint SDK and websites.
+
+Axelar provides the technology that connects the NFT on different blockchains.
 
